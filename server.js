@@ -5,10 +5,10 @@ const routes = require('./routers/userRoute');
 const connectDB = require('./db/connect')
 
 app = express();
-app.use(json())
+app.use(json());
 app.use(routes);
 
-const port = 3000;
+const port = process.env.PORT;
 
 const start = async () => {
     try {
