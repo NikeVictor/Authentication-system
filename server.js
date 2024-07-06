@@ -6,7 +6,7 @@ const connectDB = require('./db/connect')
 
 app = express();
 app.use(json());
-app.use(routes);
+app.use('/api/v1', routes);
 
 const port = process.env.PORT;
 

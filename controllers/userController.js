@@ -23,7 +23,7 @@ module.exports = {
         const accessToken = jwt.sign({userId: user._id}, process.env.JWT_SECRET, {
           expiresIn: "1h"
        })
-       user.accessToken = accessToken;
+       user.token = accessToken;
         await user.save();
         
         res.json({
